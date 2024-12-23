@@ -22,15 +22,15 @@ export class App{
        
     }
 
-    useRoutes(){
+    useRoutes(): void{
         this.app.use('/users', this.userController.router);
     }
 
-    useExeprionFilters(){
+    useExeprionFilters(): void{
         this.app.use(this.exeptionFilter.catch.bind(this.exeptionFilter))
     }
 
-    public async init(){
+    public async init(): Promise<void>{
         this.useRoutes();
         this.useExeprionFilters()
         this.server = this.app.listen(this.port);

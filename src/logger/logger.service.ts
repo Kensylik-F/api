@@ -15,15 +15,11 @@ export class LoggerService implements ILogger {
             displayFunctionName: false
         })
     }
-
     log(...args: unknown[]){
         this.logger.info(...args);
-    }
-
-    error(...args: unknown[]){
+    }error(...args: unknown[]){
         this.logger.error(...args);
     }
-
     warn(...args: unknown[]){
         this.logger.warn(...args);
     }
